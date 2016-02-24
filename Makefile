@@ -5,7 +5,7 @@
 ## Login   <frasse_l@epitech.net>
 ## 
 ## Started on  Wed Feb 24 00:55:28 2016 loic frasse-mathon
-## Last update Wed Feb 24 16:16:59 2016 loic frasse-mathon
+## Last update Wed Feb 24 18:11:35 2016 loic frasse-mathon
 ##
 
 RM		= rm -f
@@ -15,7 +15,8 @@ NASM		= nasm -f elf64
 CC		= ld
 
 SRC		= src/strlen.S \
-		src/strchr.S
+		src/strchr.S \
+		src/memset.S
 
 OBJ		= $(SRC:.S=.o)
 
@@ -40,8 +41,10 @@ fclean:		clean
 re:		fclean all
 
 test:
-		$(NASM) -o test.o test.S
-		gcc -c -o main.o main.c
-		gcc -o a.out main.o test.o
-		rm -f main.o
-		rm -f test.o
+		@$(NASM) -o test.o test.S
+		@gcc -c -o main.o main.c
+		@gcc -o a.out main.o test.o
+		@rm -f main.o
+		@rm -f test.o
+		@./a.out
+		@rm -f a.out
