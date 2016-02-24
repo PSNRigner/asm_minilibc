@@ -5,7 +5,7 @@
 ## Login   <frasse_l@epitech.net>
 ## 
 ## Started on  Wed Feb 24 00:55:28 2016 loic frasse-mathon
-## Last update Wed Feb 24 18:11:35 2016 loic frasse-mathon
+## Last update Wed Feb 24 18:18:08 2016 loic frasse-mathon
 ##
 
 RM		= rm -f
@@ -16,7 +16,8 @@ CC		= ld
 
 SRC		= src/strlen.S \
 		src/strchr.S \
-		src/memset.S
+		src/memset.S \
+		src/memcpy.S
 
 OBJ		= $(SRC:.S=.o)
 
