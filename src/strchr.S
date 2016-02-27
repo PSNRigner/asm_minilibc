@@ -1,3 +1,13 @@
+;;
+;; strchr.S for  in /home/frasse_l/Projets/asm_minilibc
+;; 
+;; Made by loic frasse-mathon
+;; Login   <frasse_l@epitech.net>
+;; 
+;; Started on  Sat Feb 27 14:32:32 2016 loic frasse-mathon
+;; Last update Sat Feb 27 14:32:40 2016 loic frasse-mathon
+;;
+
 	global strchr
 	
 section .text
@@ -12,15 +22,12 @@ strchr_while:
 
 	mov ch, [rax]
 	
-	;; Return pointer if founded char
 	cmp ch, cl
 	jz strchr_ret
 
-	;; Loop while not at str end
 	cmp ch, 0
 	jnz strchr_while
 
-	;; Return null if no result
 	mov rax, 0
 	ret
 strchr_ret:

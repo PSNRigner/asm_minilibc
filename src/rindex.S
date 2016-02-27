@@ -1,3 +1,13 @@
+;;
+;; rindex.S for  in /home/frasse_l/Projets/asm_minilibc
+;; 
+;; Made by loic frasse-mathon
+;; Login   <frasse_l@epitech.net>
+;; 
+;; Started on  Sat Feb 27 14:32:42 2016 loic frasse-mathon
+;; Last update Sat Feb 27 14:32:50 2016 loic frasse-mathon
+;;
+
 	global rindex
 	
 section .text
@@ -12,14 +22,11 @@ rindex_while:
 
 	mov ch, [rdi]
 	
-	;; Return pointer if founded char
 	cmp ch, cl
 	jnz rindex_if
 	mov rax, rdi
 rindex_if:
-	;; Loop while not at str end
 	cmp ch, 0
 	jnz rindex_while
 
-	;; Return 
 	ret
