@@ -5,7 +5,7 @@
 ;; Login   <frasse_l@epitech.net>
 ;; 
 ;; Started on  Sat Feb 27 14:32:25 2016 loic frasse-mathon
-;; Last update Sat Feb 27 14:32:25 2016 loic frasse-mathon
+;; Last update Sat Feb 27 16:55:46 2016 loic frasse-mathon
 ;;
 
 	global strpbrk
@@ -23,7 +23,6 @@ strpbrk_while:
 	jz strpbrk_end
 
 	mov r9, rsi
-	dec r8
 	dec r9
 
 strpbrk_while_2:

@@ -5,7 +5,7 @@
 ## Login   <frasse_l@epitech.net>
 ## 
 ## Started on  Wed Feb 24 00:55:28 2016 loic frasse-mathon
-## Last update Sat Feb 27 14:13:25 2016 loic frasse-mathon
+## Last update Mon Feb 29 14:14:15 2016 loic frasse-mathon
 ##
 
 RM		= rm -f
@@ -16,17 +16,16 @@ CC		= gcc -g
 
 SRC		= src/strlen.S \
 		src/strchr.S \
-		src/memset.S \
-		src/memcpy.S \
 		src/strcmp.S \
 		src/strncmp.S \
 		src/strcasecmp.S \
 		src/rindex.S \
 		src/strstr.S \
 		src/strpbrk.S \
-#		src/strcspn.S \
-# memmove -> Segfault
-#		src/memmove.S
+		src/strcspn.S \
+		src/memcpy.S \
+		src/memset.S \
+		src/memmove.S
 
 OBJ		= $(SRC:.S=.o)
 
@@ -57,4 +56,4 @@ test:
 		@rm -f main.o
 		@rm -f test.o
 		@./a.out
-#		@rm -f a.out
+		@rm -f a.out
