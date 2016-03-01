@@ -5,7 +5,7 @@
 ## Login   <frasse_l@epitech.net>
 ## 
 ## Started on  Wed Feb 24 00:55:28 2016 loic frasse-mathon
-## Last update Tue Mar  1 04:01:58 2016 loic frasse-mathon
+## Last update Tue Mar  1 12:22:49 2016 loic frasse-mathon
 ##
 
 RM		= rm -f
@@ -14,11 +14,11 @@ NASM		= nasm -f elf64
 
 CC		= ld
 
-BONUS		= src/memccpy.S \
-		src/strcat.S \
-		src/strdup.S \
-		src/fabs.S \
-		src/atoi.S
+BONUS		= bonus/memccpy.S \
+		bonus/strcat.S \
+		bonus/strdup.S \
+		bonus/fabs.S \
+		bonus/atoi.S
 
 SRC		= src/strlen.S \
 		src/strchr.S \
