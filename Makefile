@@ -5,14 +5,18 @@
 ## Login   <frasse_l@epitech.net>
 ## 
 ## Started on  Wed Feb 24 00:55:28 2016 loic frasse-mathon
-## Last update Mon Feb 29 14:14:15 2016 loic frasse-mathon
+## Last update Tue Mar  1 01:12:27 2016 loic frasse-mathon
 ##
 
 RM		= rm -f
 
 NASM		= nasm -f elf64
 
-CC		= gcc -g
+CC		= ld
+
+BONUS		= src/memccpy.S \
+		src/strcat.S \
+		src/strdup.S
 
 SRC		= src/strlen.S \
 		src/strchr.S \
@@ -25,7 +29,8 @@ SRC		= src/strlen.S \
 		src/strcspn.S \
 		src/memcpy.S \
 		src/memset.S \
-		src/memmove.S
+		src/memmove.S \
+		$(BONUS)
 
 OBJ		= $(SRC:.S=.o)
 
@@ -56,4 +61,4 @@ test:
 		@rm -f main.o
 		@rm -f test.o
 		@./a.out
-		@rm -f a.out
+#		@rm -f a.out
